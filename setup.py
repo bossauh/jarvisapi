@@ -7,11 +7,11 @@ setup(
     license='MIT',
     description='This is the api used for a small WIP project.',
     author='bossauh',
-    author_eemail='philmattdev@gmail.com',
+    author_email='philmattdev@gmail.com',
     url='https://github.com/bossauh/jarvisapi',
     download_url='https://github.com/bossauh/jarvisapi/archive/v0.1-beta.tar.gz',
     keywords=['jarvis', 'voice assistant'],
-    instal_requires=[
+    install_requires=[
         'requests',
         'nltk'
     ],
