@@ -1,6 +1,6 @@
 from termcolor import colored
 from colorama import init
-from utils import current_path
+from jarvisapi.utils import current_path
 
 import os
 
