@@ -3,17 +3,19 @@ from distutils.core import setup
 setup(
     name='jarvisapi',
     packages=['jarvisapi'],
-    version='0.2',
+    version='0.3',
     license='MIT',
     description='This is the api used for a small WIP project.',
     author='bossauh',
     author_email='philmattdev@gmail.com',
     url='https://github.com/bossauh/jarvisapi',
-    download_url='https://github.com/bossauh/jarvisapi/archive/v0.2-beta.tar.gz',
+    download_url='https://github.com/bossauh/jarvisapi/archive/v0.3-beta.tar.gz',
     keywords=['jarvis', 'voice assistant'],
     install_requires=[
         'requests',
-        'nltk'
+        'nltk',
+        'colorama',
+        'termcolor'
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
