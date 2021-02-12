@@ -27,7 +27,7 @@ class Websocket:
             self.s.listen(5)
             self.client_list = client_list
         else:
-            self.s.connect((host, port))
+            self.s.connect((host, int(port)))
         
         self.logger_instance = logger
         self.event = pymitter
