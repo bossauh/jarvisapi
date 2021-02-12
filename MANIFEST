@@ -3,3 +3,5 @@ setup.cfg
 setup.py
 jarvisapi\__init__.py
 jarvisapi\api.py
+jarvisapi\logger.py
+jarvisapi\utils.py
