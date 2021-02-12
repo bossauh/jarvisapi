@@ -9,7 +9,7 @@ setup(
     author='bossauh',
     author_email='philmattdev@gmail.com',
     url='https://github.com/bossauh/jarvisapi',
-    download_url='https://github.com/bossauh/jarvisapi/archive/v0.1-beta.tar.gz',
+    download_url='https://github.com/bossauh/jarvisapi/archive/v0.2-beta.tar.gz',
     keywords=['jarvis', 'voice assistant'],
     install_requires=[
         'requests',
