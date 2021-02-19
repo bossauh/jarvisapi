@@ -56,7 +56,7 @@ class Websocket:
 
                     self.log(f"Websocket has received {data}", 0)
                     self.log("Now emitting to websocket_receive", 0)
-                    self.event.emit("websocket_receive", data)
+                    self.event.emit("ws_" + data['type'], data)
                     self.log("Data has been successfully emitted to websocket_receive", 0)
             except KeyboardInterrupt:
                 break
@@ -113,6 +113,18 @@ class API:
         self._log(f"POSTING: to {url} with {data}", 0)
         requests.post(url, json=data)
         self._log(f"POSTED: to {url} with {data}", 0)
+    
+    def send_data(self, type, data):
+        url = self.base + "send_data"
+        data = {
+            "data": data,
+            "type": type,
+            "from": self.name
+        }
+
+        self._log(f"POSTING: to {url} with {data}", 0)
+        requests.post(url, json=data)
+        self._log(f"POSTED: to {url} with {data}", 0)
 
     def get_tags(self, text, tags):
         self._log(f"Retrieving tags {tags} from the text {text}", 0)
@@ -125,7 +137,6 @@ class API:
         return meet_tags
     
     def log(self, text, level=0):
-        """ DEPRECATED """
         url = self.base + "log"
         data = {
             "content": str(text),
@@ -136,3 +147,5 @@ class API:
         self._log(f"POSTING: to {url} with {data}", 0)
         requests.post(url, json=data)
         self._log(f"POSTED: to {url} with {data}", 0)
+    
+
